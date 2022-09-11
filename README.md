@@ -6,7 +6,7 @@ The final trained model is tested on the same test track that was run during the
 
 <img src ="img/projectStructure.png" >
 
-# Objective of the project
+# Objective Of The Project
 
 - Use the simulator to collect data of good driving behavior
 - Design, train and validate a model that predicts a steering angle from image data
@@ -36,5 +36,11 @@ The final trained model is tested on the same test track that was run during the
 - step 5 : Use the defined generator for training set and validation set
 - step 6 :  Using keras, build a regression model based on nvidia architecture  to predict the steering angle
 
-# My project includes the following files 
+# My Project Includes The Following Files 
 
+- model.py containing the script to create and train the model
+- drive.py for driving the car in autonomous mode
+- model.h5 containing a trained convolution neural network
+- README.md summarizing the results
+- environment-gpu.yml environment file with GPU
+- images folder contains the sample images
