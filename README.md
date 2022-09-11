@@ -58,3 +58,15 @@ During training, the human demonstrator drives the vehicle using his/her keyboar
 
 When you first run the simulator, you’ll see a configuration screen asking what size and graphical quality you would like. We suggest running at the smallest size and the fastest graphical quality.
 We also suggest closing most other applications (especially graphically intensive applications) on your computer, so that your machine can devote its resources to running the simulator.
+
+*Collecting Training Data*
+
+In order to start collecting training data, you'll need to do the following:
+
+1.Enter Training Mode in the simulator.
+2.Start driving the car to get a feel for the controls.
+3.When you are ready, hit the record button in the top right to start recording.
+4.Continue driving for a few laps or till you feel like you have enough data.
+5.Hit the record button in the top right again to stop recording.
+
+
