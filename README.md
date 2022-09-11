@@ -55,4 +55,6 @@ The final trained model is tested on the same test track that was run during the
 During training, the human demonstrator drives the vehicle using his/her keyboard, as in a video game:
 
 <img src ="img/train_screen.png" >
-<img src = ""
+
+When you first run the simulator, you’ll see a configuration screen asking what size and graphical quality you would like. We suggest running at the smallest size and the fastest graphical quality.
+We also suggest closing most other applications (especially graphically intensive applications) on your computer, so that your machine can devote its resources to running the simulator.
