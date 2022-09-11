@@ -5,3 +5,10 @@ This project performs behavioral cloning, training an AI agent to mimic human dr
 The final trained model is tested on the same test track that was run during the human demonstration.
 
 # Project Stepts :
+
+- step 1 : Collecting data ( from the human demonstration) using simulator for good driving behavior
+- step 2 : Load The data
+- step 3 : Split data into trainig and validation sets
+- step 4 : Define a generator function to be used through training
+- step 5 : Use the defined generator for training set and validation set
+- step 6 :  Using keras, build a regression model based on nvidia architecture  to predict the steering angle
