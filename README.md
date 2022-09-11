@@ -6,6 +6,20 @@ The final trained model is tested on the same test track that was run during the
 
 <img src ="img/projectStructure.png" >
 
+# Dependencies
+
+- Python 3.10 / 3.7
+- TensorFlow
+- Keras
+- PIL
+- Numpy
+- h5py
+- Scikit Learn
+- Pandas
+- OpenCV
+- Matplotlib (Optional)
+- Udacity behavioral cloning simulator
+
 # Project Stepts :
 
 - step 1 : Collecting data ( from the human demonstration) using simulator for good driving behavior
