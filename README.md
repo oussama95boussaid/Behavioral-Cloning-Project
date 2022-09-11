@@ -69,4 +69,5 @@ In order to start collecting training data, you'll need to do the following:
 4. Continue driving for a few laps or till you feel like you have enough data.
 5. Hit the record button in the top right again to stop recording.
 
+*Strategies for Collecting Data*
 
