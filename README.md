@@ -41,5 +41,6 @@ The final trained model is tested on the same test track that was run during the
 - <a href= "Behavioral_Cloning_Project.ipynb">Behavioral_Cloning_Project.ipynb</a> containing the script to create and train the model
 - <a href= "drive.py"> drive.py </a>for driving the car in autonomous mode
 - <a href= "model.h5">model.h5</a> containing a trained convolution neural network
-- README.md summarizing the results
+- <a href= "video.py">video.py</a> a script that can be used to make a video of the vehicle when it is driving autonomously
+- <a href= "README.md">README.md</a> summarizing the results
 - images folder contains the sample images
