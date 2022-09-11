@@ -4,6 +4,8 @@ This project performs behavioral cloning, training an AI agent to mimic human dr
 
 The final trained model is tested on the same test track that was run during the human demonstration.
 
+<img src ="img/projectStructure.png" >
+
 # Project Stepts :
 
 - step 1 : Collecting data ( from the human demonstration) using simulator for good driving behavior
