@@ -44,3 +44,9 @@ The final trained model is tested on the same test track that was run during the
 - <a href= "video.py">video.py</a> a script that can be used to make a video of the vehicle when it is driving autonomously
 - <a href= "README.md">README.md</a> summarizing the results
 - images folder contains the sample images
+
+# Simulator Download
+
+- <a href="https://d17h27t6h515a5.cloudfront.net/topher/2017/February/58ae46bb_linux-sim/linux-sim.zip">Linux</a>
+- <a href="https://d17h27t6h515a5.cloudfront.net/topher/2017/February/58ae4594_mac-sim.app/mac-sim.app.zip">Mac</a>
+- <a href="https://d17h27t6h515a5.cloudfront.net/topher/2017/February/58ae4419_windows-sim/windows-sim.zip">Windows</a>
