@@ -6,6 +6,13 @@ The final trained model is tested on the same test track that was run during the
 
 <img src ="img/projectStructure.png" >
 
+# Objective of the project
+
+- Use the simulator to collect data of good driving behavior
+- Design, train and validate a model that predicts a steering angle from image data
+- Use the model to drive the vehicle autonomously around the first track in the simulator. The vehicle should remain on the road for an entire loop around the track.
+- Summarize the results with a written report
+
 # Dependencies
 
 - Python 3.10 / 3.7
@@ -28,3 +35,6 @@ The final trained model is tested on the same test track that was run during the
 - step 4 : Define a generator function to be used through training
 - step 5 : Use the defined generator for training set and validation set
 - step 6 :  Using keras, build a regression model based on nvidia architecture  to predict the steering angle
+
+# My project includes the following files 
+
