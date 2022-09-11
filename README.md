@@ -38,7 +38,7 @@ The final trained model is tested on the same test track that was run during the
 
 # My Project Includes The Following Files 
 
-- <a href= "behavioral_Cloning_Project.py">Behavioral_Cloning_Project.py</a> containing the script to create and train the model
+- <a href= "Behavioral_Cloning_Project.ipynb">Behavioral_Cloning_Project.ipynb</a> containing the script to create and train the model
 - <a href= "drive.py"> drive.py </a>for driving the car in autonomous mode
 - <a href= "model.h5">model.h5</a> containing a trained convolution neural network
 - README.md summarizing the results
