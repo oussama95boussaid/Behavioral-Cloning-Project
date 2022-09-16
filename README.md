@@ -198,7 +198,68 @@ he architecture summary is:
 Conv1 (5x5x6) -> Max Pool -> Conv2 (5x5x16) -> Max Pool -> Flatten -> FC 1 (120) -> FC2 (84) -> Output (1)
  
 The LeNet architecture did not satisfy the Project objective; so I tried the NVIDIA's <a href="http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf">"End to End Learning for Self-Driving Cars"</a>.
+
+A transfer learning approach is also feasible, for example leveraging the base layers of an ImageNet pre-trained VGG16 model, and training a custom regression head. 
  
 <img src ="img/NvidiaNet.png">
 
-A transfer learning approach is also feasible, for example leveraging the base layers of an ImageNet pre-trained VGG16 model, and training a custom regression head. 
+
+In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. I found that my first model had a low mean squared error on the training set but a high mean squared error on the validation set. This implied that the model was overfitting.
+
+To combat the overfitting, I added dropout layers into model and added more training data.
+
+The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track. It turned out that the cv2 lib is reading images in BGR format, and the drive.py providing images in RGB. Thus I added the conversion from BGR to RGB after loading the images.
+
+At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road video.mp4.
+
+**Validating the Network**
+
+In order to validate your network, you'll want to compare model performance on the training set and a validation set. The validation set should contain image and steering data that was not used for training. A rule of thumb could be to use 80% of your data for training and 20% for validation or 70% and 30%. Be sure to randomly shuffle the data before splitting into training and validation sets.
+
+If model predictions are poor on both the training and validation set (for example, mean squared error is high on both), then this is evidence of underfitting. Possible solutions could be to
+
+- increase the number of epochs
+- add more convolutions to the network.
+
+When the model predicts well on the training set but poorly on the validation set (for example, low mean squared error for training set, high mean squared error for validation set), this is evidence of overfitting. If the model is overfitting, a few ideas could be to
+
+- use dropout or pooling layers
+- use fewer convolution or fewer fully connected layers
+- collect more data or further augment the data set
+
+Ideally, the model will make good predictions on both the training and validation sets. The implication is that when the network sees an image, it can successfully predict what angle was being driven at that moment.
+
+# Final Network Model
+
+My final network consists of 11 layers, including 
+
+- 1 normalization layer 
+- 1 cropping layer 
+- 5 convolutional layers 
+- 4 fully connected layers with dropouts
+
+The input image is split into RGB planes and passed to the network.
+
+The first layer of the network is the normalizer that hard-coded and is not adjusted in the learning process. Performing normalization in the network allows the normalization scheme to be altered with the network architecture and to be accelerated via GPU processing. The second layer of the network crops the images and removes the bottom and top parts that do not contribute to the calculation of the steering angle (bottom part contains the hood of the car and the top part captures trees and hills and sky).  The convolutional layers were designed to perform feature extraction. The network uses strided convolutions in the first three convolutional layers with a 2×2 stride and a 5×5 kernel and a non-strided convolution with a 3×3 kernel size in the last two convolutional layers. After that fully connected layers leading to an output the steering angle.
+
+The model contains dropout layers in order to reduce overfitting.
+
+# Model Training
+
+The model was trained and validated on one laps of route 1.
+
+In order to allow huge amount of training data a data generator is used. 
+
+The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
+
+The model used an adam optimizer, so the learning rate was not tuned manually.
+
+Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road.
+
+
+
+
+
+
+
+
