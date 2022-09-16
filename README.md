@@ -98,9 +98,7 @@ In order to start collecting training data, you'll need to do the following:
 - knowing when to stop collecting more data
 
 The following figure shows an example I have collected during the training time :
-
 <img src ="img/normal_cameras.png" >
- 
  **Dataset Statistics**
  
 The dataset consists of 24108 images:
@@ -110,3 +108,9 @@ The dataset consists of 24108 images:
 - 1608 validation samples
 
 The training track has a lot of shallow bends and straight lines. As a result, the majority of recorded steering angles are zero. Therefore, image preprocessing and corresponding steering angles are needed to generalize the training model to unseen tracks, such as our validation track.
+
+**Data Preprocessing**
+
+*Normalize the images*
+
+In Keras, lambda layers can be used to create arbitrary functions that operate on each image as it passes through the layer.
