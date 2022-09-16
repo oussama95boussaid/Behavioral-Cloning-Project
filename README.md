@@ -136,6 +136,22 @@ The idea behind this operation is left turning bends are more prevalent than rig
 <p>Flipped image from the center camera</p>
 <img src ="img/FlippedImg.jpg" titel >
 
-**Using Multiple Cameras :**
+**Cropping Images :**
+
+The cameras in the simulator capture 160 pixel by 320 pixel images.
+
+Not all of these pixels contain useful information, however. In the image above, the top portion of the image captures trees and hills and sky, and the bottom portion of the image captures the hood of the car.
+
+So in order to make the model train faster, i   cropped  each image to focus on only the portion of the image that is useful for predicting a steering angle.
+
+Keras provides **the Cropping2D** layer for image cropping within the model. This is relatively fast, because the model is parallelized on the GPU, so many images are cropped simultaneously.
+
+By contrast, image cropping outside the model on the CPU is relatively slow.
+
+Also, by adding the cropping layer, the model will automatically crop the input images when making predictions in drive.py.
+
+The Cropping2D layer might be useful for choosing an area of interest that excludes the sky and/or the hood of the car.
+
+# Using Multiple Cameras 
 
 Use left and right camera images in addition to the center camera image. File names of left and right camera images are in columns 2 and 3 respectively in the driving_log.csv file. Adjust the left camera and right camera steering measurements by a correction coefficient; so that the left camera measurement will be (measurement+coefficient) and the right camera measurement will be (measurement-coefficient); the center camera image steering measurement need not be corrected. After trial and error; I arrived at a correction coefficient of 0.2
