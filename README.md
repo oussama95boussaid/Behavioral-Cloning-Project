@@ -191,14 +191,14 @@ First, I started with a very basic Neural Network in Keras: Flatten the images (
 
 Next, I tried the LeNet model for the neural network architecture.
  
-<img src ="img/multiple-cameras.png">
+<img src ="img/lenetAr.jpeg">
  
- The architecture summary is:
+he architecture summary is:
  
- Conv1 (5x5x6) -> Max Pool -> Conv2 (5x5x16) -> Max Pool -> Flatten -> FC 1 (120) -> FC2 (84) -> Output (1)
+Conv1 (5x5x6) -> Max Pool -> Conv2 (5x5x16) -> Max Pool -> Flatten -> FC 1 (120) -> FC2 (84) -> Output (1)
  
- The LeNet architecture did not satisfy the Project objective; so I tried the NVIDIA's <a href="http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf">"End to End Learning for Self-Driving Cars"</a>.
+The LeNet architecture did not satisfy the Project objective; so I tried the NVIDIA's <a href="http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf">"End to End Learning for Self-Driving Cars"</a>.
  
-<img src ="img/multiple-cameras.png">
+<img src ="img/NvidiaAr.png">
 
 A transfer learning approach is also feasible, for example leveraging the base layers of an ImageNet pre-trained VGG16 model, and training a custom regression head. 
