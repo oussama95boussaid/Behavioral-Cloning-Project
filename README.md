@@ -183,3 +183,6 @@ From the perspective of the left camera, the steering angle would be less than t
 Use left and right camera images in addition to the center camera image. File names of left and right camera images are in columns 2 and 3 respectively in the driving_log.csv file. Adjust the left camera and right camera steering measurements by a correction coefficient; so that the left camera measurement will be (measurement+coefficient) and the right camera measurement will be (measurement-coefficient); the center camera image steering measurement need not be corrected. After trial and error; I arrived at a correction coefficient of 0.2
 
 
+# Deriving and Designing a Model Architecture
+
+Since the task of predicting steering angles from an input image is a computer vision task, a convolutional neural network (CNN) architecture is most appropriate. There has been prior work done to predict vehicle steering angles from camera images, such as NVIDIA's <a href="http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf">"End to End Learning for Self-Driving Cars"</a>
