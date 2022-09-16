@@ -164,9 +164,13 @@ Here is an example of an input image and its cropped version after passing throu
 
 <img src ="img/CroppedImg.jpg" titel >
 
+# Tips
+
+ keep in mind that training images are loaded in BGR colorspace using cv2 while drive.py load images in RGB to predict the steering angles.
+
 # Using Multiple Cameras 
 
-**Explanation of How Multiple Cameras Work**
+**Explanation of How Multiple Cameras Work :**
 
 The image below gives a sense for how multiple cameras are used to train a self-driving car. This image shows a bird's-eye perspective of the car. The driver is moving forward but wants to turn towards a destination on the left.
 
