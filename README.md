@@ -75,6 +75,8 @@ The file **«video.py»** was created from the dataset using the command **«pyt
 - You could slightly alter the code in drive.py and/or video.py to create a video of what your model sees after the image is processed (may be helpful for debugging).
 
 
+# Data Collection, Augmentation, and Preprocessing
+
 *Collecting Training Data*
 
 In order to start collecting training data, you'll need to do the following:
