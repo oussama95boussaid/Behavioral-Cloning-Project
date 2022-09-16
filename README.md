@@ -203,6 +203,15 @@ A transfer learning approach is also feasible, for example leveraging the base l
  
 <img src ="img/NvidiaNet.png">
 
+
+In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. I found that my first model had a low mean squared error on the training set but a high mean squared error on the validation set. This implied that the model was overfitting.
+
+To combat the overfitting, I added dropout layers into model and added more training data.
+
+The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track. It turned out that the cv2 lib is reading images in BGR format, and the drive.py providing images in RGB. Thus I added the conversion from BGR to RGB after loading the images.
+
+At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road video.mp4.
+
 **Validating the Network**
 
 In order to validate your network, you'll want to compare model performance on the training set and a validation set. The validation set should contain image and steering data that was not used for training. A rule of thumb could be to use 80% of your data for training and 20% for validation or 70% and 30%. Be sure to randomly shuffle the data before splitting into training and validation sets.
@@ -227,6 +236,5 @@ Ideally, the model will make good predictions on both the training and validatio
 
 
 
-In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. I found that my first model had a low mean squared error on the training set but a high mean squared error on the validation set. This implied that the model was overfitting.
 
 
