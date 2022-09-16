@@ -87,11 +87,7 @@ In order to start collecting training data, you'll need to do the following:
 4. Continue driving for a few laps or till you feel like you have enough data.
 5. Hit the record button in the top right again to stop recording.
 
-The following figure shows an example I have collected during the training time :
-
-<img src ="img/normal_cameras.png" >
-<br/>
-*Strategies for Collecting Data*
+**Strategies for Collecting Data**
 
 - the car should stay in the center of the road as much as possible
 - if the car veers off to the side, it should recover back to center
@@ -100,3 +96,8 @@ The following figure shows an example I have collected during the training time 
 - collecting data from the second track can also help generalize the model
 - we want to avoid overfitting or underfitting when training the model
 - knowing when to stop collecting more data
+
+The following figure shows an example I have collected during the training time :
+
+<img src ="img/normal_cameras.png" >
+ 
