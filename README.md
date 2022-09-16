@@ -164,6 +164,41 @@ Here is an example of an input image and its cropped version after passing throu
 
 <img src ="img/CroppedImg.jpg" titel >
 
+# Tips
+
+ keep in mind that training images are loaded in BGR colorspace using cv2 while drive.py load images in RGB to predict the steering angles.
+
 # Using Multiple Cameras 
 
+**Explanation of How Multiple Cameras Work :**
+
+The image below gives a sense for how multiple cameras are used to train a self-driving car. This image shows a bird's-eye perspective of the car. The driver is moving forward but wants to turn towards a destination on the left.
+
+From the perspective of the left camera, the steering angle would be less than the steering angle from the center camera. From the right camera's perspective, the steering angle would be larger than the angle from the center camera. The next section will discuss how this can be implemented in your project although there is no requirement to use the left and right camera images.
+
+**Angles between the destination and each camera**
+
+<img src ="img/multiple-cameras.png"  >
+
 Use left and right camera images in addition to the center camera image. File names of left and right camera images are in columns 2 and 3 respectively in the driving_log.csv file. Adjust the left camera and right camera steering measurements by a correction coefficient; so that the left camera measurement will be (measurement+coefficient) and the right camera measurement will be (measurement-coefficient); the center camera image steering measurement need not be corrected. After trial and error; I arrived at a correction coefficient of 0.2
+
+
+# Deriving and Designing a Model Architecture
+
+Since the task of predicting steering angles from an input image is a computer vision task, a convolutional neural network (CNN) architecture is most appropriate. There has been prior work done to predict vehicle steering angles from camera images.
+
+First, I started with a very basic Neural Network in Keras: Flatten the images (start with a Keras Sequential model and then add a Flatten Layer) and pass that to a Dense layer with a single output node to predict the steering angle. Input shape of images is (160, 320, 3).
+
+Next, I tried the LeNet model for the neural network architecture.
+ 
+<img src ="img/multiple-cameras.png">
+ 
+ The architecture summary is:
+ 
+ Conv1 (5x5x6) -> Max Pool -> Conv2 (5x5x16) -> Max Pool -> Flatten -> FC 1 (120) -> FC2 (84) -> Output (1)
+ 
+ The LeNet architecture did not satisfy the Project objective; so I tried the NVIDIA's <a href="http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf">"End to End Learning for Self-Driving Cars"</a>.
+ 
+<img src ="img/multiple-cameras.png">
+
+A transfer learning approach is also feasible, for example leveraging the base layers of an ImageNet pre-trained VGG16 model, and training a custom regression head. 
