@@ -125,3 +125,6 @@ A lambda layer will look something like:
 
 **Data Augmentation :**
 
+Augment the data by flipping the images (use OpenCV flip function) and multiply measurements by -1.0 (taking the opposite sign of the steering measurement). 
+
+The idea behind this operation is left turning bends are more prevalent than right bends in the training track. Hence, in order to increase the generalization of our mode. we flip images and respective steering angles
