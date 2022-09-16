@@ -77,7 +77,7 @@ The file **«video.py»** was created from the dataset using the command **«pyt
 
 # Data Collection, Augmentation, and Preprocessing
 
-*Collecting Training Data*
+**Collecting Training Data**
 
 In order to start collecting training data, you'll need to do the following:
 
@@ -86,6 +86,14 @@ In order to start collecting training data, you'll need to do the following:
 3. When you are ready, hit the record button in the top right to start recording.
 4. Continue driving for a few laps or till you feel like you have enough data.
 5. Hit the record button in the top right again to stop recording.
+
+The following figure shows an example I have collected during the training time :
+ 
+<img src ="img/train_screen.png" >
+<br/>
+<img src ="img/train_screen.png" >
+<br/>
+<img src ="img/train_screen.png" >
 
 *Strategies for Collecting Data*
 
