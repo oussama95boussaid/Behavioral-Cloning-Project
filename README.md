@@ -45,6 +45,7 @@ The final trained model is tested on the same test track that was run during the
 - <a href= "README.md">README.md</a> summarizing the results
 - images folder contains the sample images
 
+
 # Simulator Download
 
 - <a href="https://d17h27t6h515a5.cloudfront.net/topher/2017/February/58ae46bb_linux-sim/linux-sim.zip">Linux</a>
@@ -59,7 +60,24 @@ During training, the human demonstrator drives the vehicle using his/her keyboar
 When you first run the simulator, you’ll see a configuration screen asking what size and graphical quality you would like. We suggest running at the smallest size and the fastest graphical quality.
 We also suggest closing most other applications (especially graphically intensive applications) on your computer, so that your machine can devote its resources to running the simulator.
 
-*Collecting Training Data*
+# How to Run the Model
+
+The neural network model needed to be built into the python program file **«model.py»**. When this program was launched; needed to save the model to the **«model.h5»** file. This saved neural network model can then be invoked to run Car Simulator by running the command **«python drive.py model.h5»**. A helper file **«drive.py»** was provided by Udacity that we could modify; if we needed.
+
+
+For data collection; the following procedure must be followed: When the car drives through the simulator in «Training» mode; it saves the images in **the IMG folder** and the details of the images are stored in **the driving_log.csv file**. The drving_log.csv file has 7 columns; in the following order: Middle camera image file name, Left camera image file name, Right camera image file name, Steering , Throttle , Brake and Speed. Build a model; we could use either only the image from the central camera or from all three cameras. In the output, only the Steering value was relevant for this project; Throttle, brake and speed values were ignored.
+
+The file **«video.py»** was created from the dataset using the command **«python video.py run1»**; where «run1» is the folder where the dataset is stored.
+
+**Why create a video**
+
+- It's been noted the simulator might perform differently based on the hardware. So if your model drives succesfully on your machine it might not on another machine (your reviewer). Saving a video is a solid backup in case this happens.
+- You could slightly alter the code in drive.py and/or video.py to create a video of what your model sees after the image is processed (may be helpful for debugging).
+
+
+# Data Collection, Augmentation, and Preprocessing
+
+**Collecting Training Data**
 
 In order to start collecting training data, you'll need to do the following:
 
@@ -68,6 +86,14 @@ In order to start collecting training data, you'll need to do the following:
 3. When you are ready, hit the record button in the top right to start recording.
 4. Continue driving for a few laps or till you feel like you have enough data.
 5. Hit the record button in the top right again to stop recording.
+
+The following figure shows an example I have collected during the training time :
+ 
+<img src ="img/train_screen.png" >
+<br/>
+<img src ="img/train_screen.png" >
+<br/>
+<img src ="img/train_screen.png" >
 
 *Strategies for Collecting Data*
 
