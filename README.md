@@ -54,6 +54,11 @@ For data collection; the following procedure must be followed: When the car driv
 
 The file **«video.py»** was created from the dataset using the command **«python video.py run1»**; where «run1» is the folder where the dataset is stored.
 
+**Why create a video**
+
+- It's been noted the simulator might perform differently based on the hardware. So if your model drives succesfully on your machine it might not on another machine (your reviewer). Saving a video is a solid backup in case this happens.
+- You could slightly alter the code in drive.py and/or video.py to create a video of what your model sees after the image is processed (may be helpful for debugging).
+
 # Simulator Download
 
 - <a href="https://d17h27t6h515a5.cloudfront.net/topher/2017/February/58ae46bb_linux-sim/linux-sim.zip">Linux</a>
