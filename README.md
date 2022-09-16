@@ -131,7 +131,8 @@ The idea behind this operation is left turning bends are more prevalent than rig
 
 <p>Normal image from the center camera</p>
 <img src ="img/NormalImg.jpg" >
-<br/>
+
+
 <p>Flipped image from the center camera</p>
 <img src ="img/FlippedImg.jpg" titel >
 
