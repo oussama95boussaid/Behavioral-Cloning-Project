@@ -88,10 +88,9 @@ In order to start collecting training data, you'll need to do the following:
 5. Hit the record button in the top right again to stop recording.
 
 The following figure shows an example I have collected during the training time :
- 
+
 <img src ="img/normal_cameras.png" >
 <br/>
-
 *Strategies for Collecting Data*
 
 - the car should stay in the center of the road as much as possible
