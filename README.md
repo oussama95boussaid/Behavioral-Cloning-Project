@@ -129,11 +129,11 @@ Augment the data by flipping the images (use OpenCV flip function) and multiply 
 
 The idea behind this operation is left turning bends are more prevalent than right bends in the training track. Hence, in order to increase the generalization of our mode. we flip images and respective steering angles
 
-<p>Normal image from the center camera</p>
+**Normal image from the center camera
 <img src ="img/NormalImg.jpg" >
 
 
-<p>Flipped image from the center camera</p>
+**Flipped image from the center camera
 <img src ="img/FlippedImg.jpg" titel >
 
 **Cropping Images :**
@@ -154,11 +154,11 @@ The Cropping2D layer might be useful for choosing an area of interest that exclu
 
 Here is an example of an input image and its cropped version after passing through a Cropping2D layer:
 
-<p>Original image taken from the simulator</p>
-<img src ="img/FlippedImg.jpg" titel >
+**Original image taken from the simulator
+<img src ="img/NocroppedImg.jpg" titel >
 
-<p>Cropped image after passing through a Cropping2D layer</p>
-<img src ="img/FlippedImg.jpg" titel >
+**Cropped image after passing through a Cropping2D layer
+<img src ="img/CroppedImg.jpg" titel >
 
 # Using Multiple Cameras 
 
