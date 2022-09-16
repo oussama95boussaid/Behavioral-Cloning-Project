@@ -106,7 +106,7 @@ The following figure shows an example I have collected during the training time 
 The dataset consists of 24108 images:
 
 - 8036 images per camera angle
-- 8036 images per camera angle
-- 8036 images per camera angle
+- 6428 train samples
+- 1608 validation samples
 
 The training track has a lot of shallow bends and straight lines. As a result, the majority of recorded steering angles are zero. Therefore, image preprocessing and corresponding steering angles are needed to generalize the training model to unseen tracks, such as our validation track.
