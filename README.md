@@ -152,7 +152,7 @@ By contrast, image cropping outside the model on the CPU is relatively slow.
 
 Also, by adding the cropping layer, the model will automatically crop the input images when making predictions in drive.py.
 
-The Cropping2D layer might be useful for choosing an area of interest that excludes the sky and/or the hood of the car.
+I used the Cropping2D layer to crop the images; about 70 top pixels of the image is the scenery (trees, mountains, etc.) and about 25 bottom pixels of the image is the hood of the car
 
 Here is an example of an input image and its cropped version after passing through a Cropping2D layer:
 
