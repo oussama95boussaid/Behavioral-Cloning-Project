@@ -172,6 +172,8 @@ The image below gives a sense for how multiple cameras are used to train a self-
 
 From the perspective of the left camera, the steering angle would be less than the steering angle from the center camera. From the right camera's perspective, the steering angle would be larger than the angle from the center camera. The next section will discuss how this can be implemented in your project although there is no requirement to use the left and right camera images.
 
+**Angles between the destination and each camera**
+
 <img src ="img/multiple-cameras.png"  >
 
 
