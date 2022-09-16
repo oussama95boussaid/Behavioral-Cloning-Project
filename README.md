@@ -111,8 +111,6 @@ The training track has a lot of shallow bends and straight lines. As a result, t
 
 **Data Preprocessing**
 
-*Normalize the images*
-
 In Keras, lambda layers can be used to create arbitrary functions that operate on each image as it passes through the layer.It will ensure that the model will normalize input images when making predictions in **drive.py**.
 
 That lambda layer could take each pixel in an image and run it through the formulas:
@@ -124,4 +122,6 @@ That lambda layer could take each pixel in an image and run it through the formu
 A lambda layer will look something like:
 
 **Lambda(lambda x: (x / 255.0) - 0.5)**
+
+**Data Augmentation**
 
