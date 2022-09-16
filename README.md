@@ -229,7 +229,32 @@ When the model predicts well on the training set but poorly on the validation se
 
 Ideally, the model will make good predictions on both the training and validation sets. The implication is that when the network sees an image, it can successfully predict what angle was being driven at that moment.
 
+# Final Network Model
 
+My final network consists of 11 layers, including 
+
+- 1 normalization layer 
+- 1 cropping layer 
+- 5 convolutional layers 
+- 4 fully connected layers with dropouts
+
+The input image is split into RGB planes and passed to the network.
+
+The first layer of the network is the normalizer that hard-coded and is not adjusted in the learning process. Performing normalization in the network allows the normalization scheme to be altered with the network architecture and to be accelerated via GPU processing. The second layer of the network crops the images and removes the bottom and top parts that do not contribute to the calculation of the steering angle (bottom part contains the hood of the car and the top part captures trees and hills and sky).  The convolutional layers were designed to perform feature extraction. The network uses strided convolutions in the first three convolutional layers with a 2×2 stride and a 5×5 kernel and a non-strided convolution with a 3×3 kernel size in the last two convolutional layers. After that fully connected layers leading to an output the steering angle.
+
+The model contains dropout layers in order to reduce overfitting.
+
+# Model Training
+
+The model was trained and validated on one laps of route 1.
+
+In order to allow huge amount of training data a data generator is used. 
+
+The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
+
+The model used an adam optimizer, so the learning rate was not tuned manually.
+
+Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road.
 
 
 
