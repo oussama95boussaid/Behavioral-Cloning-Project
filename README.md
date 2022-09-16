@@ -47,12 +47,12 @@ The final trained model is tested on the same test track that was run during the
 
 # How to Run the Model
 
-The neural network model needed to be built into the python program file «model.py». When this program was launched; needed to save the model to the «model.h5» file. This saved neural network model can then be invoked to run Car Simulator by running the command «python drive.py model.h5». A helper file «drive.py» was provided by Udacity that we could modify; if we needed.
+The neural network model needed to be built into the python program file **«model.py»**. When this program was launched; needed to save the model to the **«model.h5»** file. This saved neural network model can then be invoked to run Car Simulator by running the command **«python drive.py model.h5»**. A helper file **«drive.py»** was provided by Udacity that we could modify; if we needed.
 
 
-For data collection; the following procedure must be followed: When the car drives through the simulator in «Training» mode; it saves the images in the IMG folder and the details of the images are stored in the driving_log.csv file. The drving_log.csv file has 7 columns; in the following order: Middle camera image file name, Left camera image file name, Right camera image file name, Steering , Throttle , Brake and Speed. Build a model; we could use either only the image from the central camera or from all three cameras. In the output, only the Steering value was relevant for this project; Throttle, brake and speed values ​​were ignored.
+For data collection; the following procedure must be followed: When the car drives through the simulator in «Training» mode; it saves the images in **the IMG folder** and the details of the images are stored in **the driving_log.csv file**. The drving_log.csv file has 7 columns; in the following order: Middle camera image file name, Left camera image file name, Right camera image file name, Steering , Throttle , Brake and Speed. Build a model; we could use either only the image from the central camera or from all three cameras. In the output, only the Steering value was relevant for this project; Throttle, brake and speed values were ignored.
 
-The file «video.py» was created from the dataset using the command «python video.py run1»; where «run1» is the folder where the dataset is stored.
+The file **«video.py»** was created from the dataset using the command **«python video.py run1»**; where «run1» is the folder where the dataset is stored.
 
 # Simulator Download
 
