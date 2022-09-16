@@ -75,9 +75,9 @@ The file **«video.py»** was created from the dataset using the command **«pyt
 - You could slightly alter the code in drive.py and/or video.py to create a video of what your model sees after the image is processed (may be helpful for debugging).
 
 
-# Data Collection, Augmentation, and Preprocessing
+# Data Collection, Preprocessing, and Augmentation
 
-**Collecting Training Data**
+**Collecting Training Data :**
 
 In order to start collecting training data, you'll need to do the following:
 
@@ -87,7 +87,7 @@ In order to start collecting training data, you'll need to do the following:
 4. Continue driving for a few laps or till you feel like you have enough data.
 5. Hit the record button in the top right again to stop recording.
 
-**Strategies for Collecting Data**
+**Strategies for Collecting Data :**
 
 - the car should stay in the center of the road as much as possible
 - if the car veers off to the side, it should recover back to center
@@ -99,7 +99,7 @@ In order to start collecting training data, you'll need to do the following:
 
 The following figure shows an example I have collected during the training time :
 <img src ="img/normal_cameras.png" >
- **Dataset Statistics**
+ **Dataset Statistics :**
  
 The dataset consists of 24108 images:
 
@@ -109,7 +109,7 @@ The dataset consists of 24108 images:
 
 The training track has a lot of shallow bends and straight lines. As a result, the majority of recorded steering angles are zero. Therefore, image preprocessing and corresponding steering angles are needed to generalize the training model to unseen tracks, such as our validation track.
 
-**Data Preprocessing**
+**Data Preprocessing :**
 
 In Keras, lambda layers can be used to create arbitrary functions that operate on each image as it passes through the layer.It will ensure that the model will normalize input images when making predictions in **drive.py**.
 
@@ -123,5 +123,5 @@ A lambda layer will look something like:
 
 **Lambda(lambda x: (x / 255.0) - 0.5)**
 
-**Data Augmentation**
+**Data Augmentation :**
 
