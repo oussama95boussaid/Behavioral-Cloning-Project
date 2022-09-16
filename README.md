@@ -129,7 +129,9 @@ Augment the data by flipping the images (use OpenCV flip function) and multiply 
 
 The idea behind this operation is left turning bends are more prevalent than right bends in the training track. Hence, in order to increase the generalization of our mode. we flip images and respective steering angles
 
-<img src ="img/projectStructure.png" >
+<p>Normal image from the center camera</p>
+<img src ="img/NormalImg.jpg" >
 <br/>
-<img src ="img/FlippedImg.jpg" titel >
 <p>Flipped image from the center camera</p>
+<img src ="img/FlippedImg.jpg" titel >
+
