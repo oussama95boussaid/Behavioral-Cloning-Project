@@ -152,6 +152,14 @@ Also, by adding the cropping layer, the model will automatically crop the input 
 
 The Cropping2D layer might be useful for choosing an area of interest that excludes the sky and/or the hood of the car.
 
+Here is an example of an input image and its cropped version after passing through a Cropping2D layer:
+
+<p>Original image taken from the simulator</p>
+<img src ="img/FlippedImg.jpg" titel >
+
+<p>Cropped image after passing through a Cropping2D layer</p>
+<img src ="img/FlippedImg.jpg" titel >
+
 # Using Multiple Cameras 
 
 Use left and right camera images in addition to the center camera image. File names of left and right camera images are in columns 2 and 3 respectively in the driving_log.csv file. Adjust the left camera and right camera steering measurements by a correction coefficient; so that the left camera measurement will be (measurement+coefficient) and the right camera measurement will be (measurement-coefficient); the center camera image steering measurement need not be corrected. After trial and error; I arrived at a correction coefficient of 0.2
