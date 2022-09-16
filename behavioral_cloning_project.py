@@ -15,18 +15,6 @@ import matplotlib.pyplot as plt
 import os
 from sklearn.model_selection import train_test_split
 
-# from csv import reader
-
-
-# lines=[]
-# with open('Behavioral_Cloning_Project/data/driving_log.csv') as f :
-#     reader=csv.reader(f)
-#     for i in reader:
-#         lines.append(i)
-        
-        
-# print(lines)
-
 # load the csv file
 print('loading the data...')
 data=pd.read_csv('data/driving_log.csv')
@@ -173,14 +161,17 @@ model.add(Flatten())
 model.add(Dense(1164))
 model.add(Activation('relu'))
 
-# layer 7- fully connected layer 1
+# Adding a dropout layer to avoid overfitting. Here we are have given the dropout rate as 30% after first fully connected layer
+model.add(Dropout(0.3))
+
+# layer 7- fully connected layer 2
 model.add(Dense(100))
 model.add(Activation('relu'))
 
 # Adding a dropout layer to avoid overfitting. Here we are have given the dropout rate as 30% after first fully connected layer
 model.add(Dropout(0.3))
 
-# layer 8- fully connected layer 2
+# layer 8- fully connected layer 3
 model.add(Dense(50))
 model.add(Activation('relu'))
 
@@ -188,15 +179,10 @@ model.add(Activation('relu'))
 model.add(Dropout(0.3))
 
 
-# layer 9- fully connected layer 3
+# layer 9- fully connected layer 4
 model.add(Dense(10))
 model.add(Activation('relu'))
 
-# Adding a dropout layer to avoid overfitting. Here we are have given the dropout rate as 30% after first fully connected layer
-model.add(Dropout(0.3))
-
-# layer 10- fully connected layer 4
-model.add(Dense(1)) 
 
 # train the model
 
