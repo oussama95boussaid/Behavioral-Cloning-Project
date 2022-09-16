@@ -119,7 +119,7 @@ That lambda layer could take each pixel in an image and run it through the formu
 
 **pixel_normalized = pixel / 255**
 
-**pixel_mean_centered = pixel_normalized - 0.5**
+**pixel_mean_centered = pixel_normalized - 0.5 to get resulting values between -1 and +1**
 
 A lambda layer will look something like:
 
