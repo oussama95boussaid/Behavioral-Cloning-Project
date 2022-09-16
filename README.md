@@ -185,8 +185,20 @@ Use left and right camera images in addition to the center camera image. File na
 
 # Deriving and Designing a Model Architecture
 
-Since the task of predicting steering angles from an input image is a computer vision task, a convolutional neural network (CNN) architecture is most appropriate. There has been prior work done to predict vehicle steering angles from camera images, 
+Since the task of predicting steering angles from an input image is a computer vision task, a convolutional neural network (CNN) architecture is most appropriate. There has been prior work done to predict vehicle steering angles from camera images.
 
-such as NVIDIA's <a href="http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf">"End to End Learning for Self-Driving Cars"</a>.
+First, I started with a very basic Neural Network in Keras: Flatten the images (start with a Keras Sequential model and then add a Flatten Layer) and pass that to a Dense layer with a single output node to predict the steering angle. Input shape of images is (160, 320, 3).
+
+Next, I tried the LeNet model for the neural network architecture.
+ 
+<img src ="img/multiple-cameras.png">
+ 
+ The architecture summary is:
+ 
+ Conv1 (5x5x6) -> Max Pool -> Conv2 (5x5x16) -> Max Pool -> Flatten -> FC 1 (120) -> FC2 (84) -> Output (1)
+ 
+ The LeNet architecture did not satisfy the Project objective; so I tried the NVIDIA's <a href="http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf">"End to End Learning for Self-Driving Cars"</a>.
+ 
+<img src ="img/multiple-cameras.png">
 
 A transfer learning approach is also feasible, for example leveraging the base layers of an ImageNet pre-trained VGG16 model, and training a custom regression head. 
