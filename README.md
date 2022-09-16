@@ -89,11 +89,8 @@ In order to start collecting training data, you'll need to do the following:
 
 The following figure shows an example I have collected during the training time :
  
-<img src ="img/train_screen.png" >
+<img src ="img/normal_cameras.png" >
 <br/>
-<img src ="img/train_screen.png" >
-<br/>
-<img src ="img/train_screen.png" >
 
 *Strategies for Collecting Data*
 
