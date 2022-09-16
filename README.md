@@ -176,7 +176,6 @@ From the perspective of the left camera, the steering angle would be less than t
 
 <img src ="img/multiple-cameras.png"  >
 
-
-
-
 Use left and right camera images in addition to the center camera image. File names of left and right camera images are in columns 2 and 3 respectively in the driving_log.csv file. Adjust the left camera and right camera steering measurements by a correction coefficient; so that the left camera measurement will be (measurement+coefficient) and the right camera measurement will be (measurement-coefficient); the center camera image steering measurement need not be corrected. After trial and error; I arrived at a correction coefficient of 0.2
+
+
